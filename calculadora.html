@@ -68,6 +68,11 @@
       text-align: center;
       font-size: 18px;
     }
+    .date-time {
+        margin-top: 2px;
+        text-align: center;
+        font-size: 18px;
+    }
     </style>
   </head>
   <body>
@@ -85,7 +90,9 @@
     
     <div class="result" id="result"></div>
     <div class="summary" id="summary"></div>
+    <div class = "date-time" id= "date-time"></div>
     <div class = "note" id= "note"></div>
+    
     <script>
      
       var calculatorForm = document.getElementById('calculator-form');
@@ -110,7 +117,7 @@
 
     // Call the conversion API here and get the converted amount
     // We will use a mock API call for this example
-    var exchangeRate = 1.45; 
+    var exchangeRate = 1.46; 
     var exchangeRate_0 = exchangeRate - (exchangeRate*0.1); //10%
     var exchangeRate_1 = exchangeRate - (exchangeRate*0.09); //9%
     var exchangeRate_2 = exchangeRate - (exchangeRate*0.08); //8%
@@ -197,9 +204,20 @@
    /// const commissionAmount = amount * commission / 100;
     const rate = exchangeRate.toFixed(2);
     summaryDiv.textContent = `Exchange rate: 1 MZN = ${exchangeRate} Rublos , Commission charged: ${commission}%`; /// (${commissionAmount.toFixed(2)} USD);
-   
+  
+   /// display date and time 
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML = dt;
+    
+    
    /// display additional information (note)
     noteDiv.textContent = 'Envie o screenshot desta página juntamente com o comprovativo da transferência para o nosso whatsapp';
+    
+/// display bank account information 
+   // bankinfoDiv.textContent = 'Envie o screenshot desta página juntamente com o comprovativo da transferência para o nosso whatsapp';
+    
+    
+    
   });
 </script>
 

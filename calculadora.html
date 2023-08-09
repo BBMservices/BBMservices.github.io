@@ -73,6 +73,13 @@
         text-align: center;
         font-size: 18px;
     }
+    
+    .info {
+        margin-top: 2px;
+        text-align: center;
+        font-size: 18px;
+    }
+    
     </style>
   </head>
   <body>
@@ -92,6 +99,7 @@
     <div class="summary" id="summary"></div>
     <div class = "date-time" id= "date-time"></div>
     <div class = "note" id= "note"></div>
+    <div class = "info" id= "info"></div>
     
     <script>
      
@@ -99,6 +107,7 @@
       var resultDiv = document.getElementById('result');
       var summaryDiv = document.getElementById('summary');
       var noteDiv = document.getElementById('note')
+      var infoDiv = document.getElementById('info')
 
       calculatorForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -214,7 +223,19 @@
     noteDiv.textContent = 'Envie o screenshot desta página juntamente com o comprovativo da transferência para o nosso whatsapp';
     
 /// display bank account information 
-   // bankinfoDiv.textContent = 'Envie o screenshot desta página juntamente com o comprovativo da transferência para o nosso whatsapp';
+    infoDiv.innerHTML = "<br><b>Dados bancários:</b><br>" +
+    "<p><b>BCI</b><br>" +
+    "Titular: BagVanji da Silva lobo<br>" +
+    "NIB 000800002961672010180<br>" +
+    "Número da conta: 2961672010001<br>" +
+    "<b>Mpesa:</b> 858518394</p>" +
+    "<p><b>Conta móvel & eMola</b>: 874586000<br>" +
+    "Titular: Georgina Manganhela</p>" +
+    "<p>" +
+    "<b>BIM</b><br>" +
+    "Titular: BELTON MANHIÇA<br>" +
+    "Número da conta: 323649522<br>" +
+    "NIB 000100000032364952257</p>";
     
     
     
